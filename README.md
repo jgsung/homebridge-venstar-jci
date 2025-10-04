@@ -1,6 +1,6 @@
 # homebridge-venstar-udpated
 
-Homebridge plugin for Venstar Thermostats, forked from [homebridge-venstar-thermostats](https://github.com/maladr01d/homebridge-venstar-thermostats).
+Homebridge plugin for Venstar thermostats, forked from [homebridge-venstar-thermostats](https://github.com/maladr01d/homebridge-venstar-thermostats).
 
 ## Support and difference from original plugin
 
@@ -66,6 +66,6 @@ You'll see that the first entry ("My Thermostat") is the original thermostat ent
 
 The key part is the `"sensor": 1`. That tells the plugin to add a temperature sensor accessory (instead of a full thermostat accessory) and to pull in the data from the outdoor sensor attached to the thermostat.
 
-If (as will most often be the case) this outdoor sensor is part of the same thermostat you wish to control via HomeKit, than you put the same IP address for the sensor entry as you did for the thermostat entry.
+If (as will most often be the case) this outdoor sensor is part of the same thermostat you wish to control via HomeKit, then you put the same IP address for the sensor entry as you did for the thermostat entry.
 
 At the moment, it is coded to only look for (and, as such, will only work with what is configured as) the outdoor sensor, and will not work with any other additional sensor(s) you have configured on your thermostat.

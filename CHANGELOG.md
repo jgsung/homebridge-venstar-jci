@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.3] - 2025-10-03
+
+### Changed
+
+* Updated dependency versions and syntax.
+
 ## [0.2.2] - 2024-06-03
 
 ### Added
