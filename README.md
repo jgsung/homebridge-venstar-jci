@@ -1,6 +1,6 @@
-# homebridge-venstar-udpated
+# homebridge-venstar-jci
 
-Homebridge plugin for Venstar thermostats, forked from [homebridge-venstar-thermostats](https://github.com/maladr01d/homebridge-venstar-thermostats).
+Forked from [homebridge-venstar-updated](https://github.com/thestudiojq/homebridge-venstar-updated) so I can experiment with a [Johnson Controls T9580 thermostat](https://jcithermostats.com/colordisplay/models/) - what I've been calling a Venstar ColorTouch in JCI-clothing.
 
 ## Support and difference from original plugin
 
