@@ -1,17 +1,17 @@
 {
 	"displayName": "Venstar Thermostats",
-	"name": "homebridge-venstar-updated",
+	"name": "homebridge-venstar-jci",
 	"version": "0.2.3",
-	"description": "Homebridge plugin for Venstar thermostats",
-	"author": "studiojq",
+	"description": "Homebridge plugin for Johnson Controls-branded Venstar thermostats",
+	"author": "jgsung",
 	"license": "ISC",
 	"main": "index.js",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/thestudiojq/homebridge-venstar-updated"
+		"url": "https://github.com/jgsung/homebridge-venstar-jci"
 	},
 	"bugs": {
-		"url": "https://github.com/thestudiojq/homebridge-venstar-updated/issues"
+		"url": "https://github.com/jgsung/homebridge-venstar-jci/issues"
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"

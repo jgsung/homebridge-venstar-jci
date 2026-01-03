@@ -1,5 +1,5 @@
 const platformAccessory = require( './platformAccessory.js' );
-const PLUGIN_NAME = 'homebridge-venstar-updated';
+const PLUGIN_NAME = 'homebridge-venstar-jci';
 const PLATFORM_NAME = 'VenstarThermostats';
 
 class VenstarThermostatsPlatform {

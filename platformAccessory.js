@@ -11,7 +11,7 @@ class VenstarThermostatsPlatformAccessory {
 		this.accessory
 			.getService( this.platform.Service.AccessoryInformation )
 			.setCharacteristic( this.platform.Characteristic.Manufacturer, 'Venstar' )
-			.setCharacteristic( this.platform.Characteristic.Model, 'T7900' )
+			.setCharacteristic( this.platform.Characteristic.Model, 'T9580' )
 			.setCharacteristic( this.platform.Characteristic.SerialNumber, 'UNO' );
 
 		this.API = new venstarAPI.VenstarAPI( this.uri );
@@ -129,8 +129,11 @@ class VenstarThermostatsPlatformAccessory {
 				break; 
 		}
 
+		let convertedCoolTempTarget = this.convertTemp( currentCoolTempTarget ).toFixed(2).toString();
+		let convertedHeatTempTarget = this.convertTemp( currentHeatTempTarget ).toFixed(2).toString();
+
 		this.service.getCharacteristic( this.platform.Characteristic.TargetTemperature ).updateValue( targetTemp );
-		this.API.setControl( 'mode=' + value + '&heattemp=' + currentHeatTempTarget + '&cooltemp=' + currentCoolTempTarget );
+		this.API.setControl( 'mode=' + value + '&heattemp=' + convertedHeatTempTarget + '&cooltemp=' + convertedCoolTempTarget);
 	}
 	async handleCurrentTemperatureGet() {
 
@@ -177,6 +180,7 @@ class VenstarThermostatsPlatformAccessory {
 			let tempMode;
 			let altTempMode;
 			let altTempValue;
+			let altValue;
 
 			if ( test.mode == 2 ) {
 				tempMode = 'cooltemp';
@@ -190,7 +194,9 @@ class VenstarThermostatsPlatformAccessory {
 			}
 
 			value = this.convertTemp( value ).toFixed( 2 ).toString();
-			this.API.setControl( tempMode + '=' + value + '&' + altTempMode + '=' + altTempValue );            
+			altValue = this.convertTemp( altTempValue ).toFixed( 2 ).toString();
+
+			this.API.setControl( tempMode + '=' + value + '&' + altTempMode + '=' + altValue );            
 		} );
 	}
 
